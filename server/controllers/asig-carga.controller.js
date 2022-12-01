@@ -132,9 +132,7 @@ const brigadasConsolidadas = (req, res)=>{
      })
 }
 
-const areasAsignadas = (req, res)=>{
-  /* Ramiro */
-  const i = 0;
+const areasAsignadas = (req, res)=>{  
   const text = `select distinct ob.codigo_brigada,oa.id_upm,oa.fec_inicio,oa.fec_fin,cu.codigo,cd.nombre as departamento,cu.provincia,cu.municipio,id_distrito,
     ciudad_comunidad,cu.tipo_area,ab.zona,ab.sector,su1.nombre as creacion,su2.nombre as modificacion from ope_asignacion oa
       join seg_usuario su on su.id_usuario=oa.id_usuario and oa.estado!='ANULADO' and su.estado!='ANULADO'
