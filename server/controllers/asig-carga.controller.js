@@ -498,12 +498,15 @@ const brigadasPost = async(req, res)=>{
 
 const listarBrigadasUpm = (req, res) => {
   const query = {
-    text: `select distinct ob.*,cd.nombre from cat_upm cu
+    text: `select ob.*,cd.nombre, count(ei.*)::int as puntos
+    from cat_upm cu
     join cat_departamento cd on cd.id_departamento=cu.id_departamento
     join ope_asignacion oa on oa.id_upm=cu.id_upm and oa.estado!='ANULADO'
+    left join enc_informante ei on ei.id_asignacion = oa.id_asignacion
     join seg_usuario su on su.id_usuario=oa.id_usuario
     join ope_brigada ob on ob.id_brigada=su.id_brigada
-    where cu.id_upm=${req.params.id}`
+    where cu.id_upm=${req.params.id}
+    GROUP BY ob.id_brigada, cd.nombre`
   }
   client.query(query, async (err, result) => {
     if (err) {
