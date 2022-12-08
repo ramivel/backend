@@ -1,32 +1,26 @@
 {
-    "name": "servicios-rest",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "nodemon server/server.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "activedirectory2": "^2.1.0",
-        "bcrypt": "^5.0.0",
-        "bcryptjs": "^2.4.3",
-        "cors": "^2.8.5",
-        "crypto-js": "^4.0.0",
-        "dotenv": "^10.0.0",
-        "express": "^4.17.1",
-        "express-fileupload": "^1.2.0",
-        "express-validator": "^6.11.1",
-        "jsonwebtoken": "^8.5.1",
-        "mongoose": "^5.13.0",
-        "morgan": "^1.10.0",
-        "nodemon": "^2.0.7",
-        "pg": "^8.7.1",
-        "pg-pool": "^3.4.1",
-        "pg-promise": "^10.5.8",
-        "socket.io": "^4.2.0"
-    },
-    "devDependencies": {}
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "Servicios de BackEnd de la plantilla",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Ramiro Velasco",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.8.0",
+    "pg-pool": "^3.5.2"
+  }
 }

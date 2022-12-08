@@ -1,7 +1,4 @@
+const serverModel = require('./models/server.model');
 
-//const express = require('express');
-//const app = express();
-const Server = require('./models/server');
-
-const server = new Server();
+const server = new serverModel();
 server.listen();
